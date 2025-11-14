@@ -41,6 +41,7 @@ const kTag = Color(0xFF2B3B95);
 
 ///SHADOW COLORS
 final kAppBarShadowColor = const Color(0xffc0c0c0).withOpacity(.25);
+final kSearchColor = Color(0xFF25282D);
 
 
 final kPrimaryColor = Color(0xfff1e7d5);
