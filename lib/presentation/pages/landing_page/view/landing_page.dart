@@ -5,6 +5,7 @@ import 'package:instagram_clone/core/constants/app_colors.dart';
 import 'package:instagram_clone/core/constants/app_images.dart';
 import 'package:instagram_clone/core/constants/app_strings.dart';
 import 'package:instagram_clone/presentation/pages/home/view/home.dart';
+import 'package:instagram_clone/presentation/pages/profile/view/profile.dart';
 import 'package:instagram_clone/presentation/pages/reels/view/reels.dart';
 import 'package:instagram_clone/presentation/pages/search/view/search.dart';
 import 'package:instagram_clone/presentation/widgets/app_svg.dart';
@@ -24,7 +25,7 @@ class _LandingPageState extends State<LandingPage> {
     Search(),
     Container(),
     Reels(),
-    Container(),
+    Profile(),
   ];
   void _onItemTapped(int index) {
     setState(() {

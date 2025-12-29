@@ -5,17 +5,20 @@ import 'package:instagram_clone/core/constants/app_styles.dart';
 class AppOutlinedButton extends StatelessWidget {
   final String? label;
   final Function()? onTap;
-  const AppOutlinedButton({super.key,this.label,this.onTap});
+  final bool? outline;
+  final double? height;
+  const AppOutlinedButton({super.key,this.label,this.onTap,this.outline,this.height});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 30,
+      height: height?? 30,
       child: OutlinedButton(
             style: OutlinedButton.styleFrom(
-              foregroundColor: kWhite,
+              foregroundColor:outline==true? kWhite:kTransparent,
+              backgroundColor:outline==true?kTransparent: kPrimaryButtonBackground,
               side: BorderSide(
-                color: kWhite
+                color:outline==true? kWhite:kTransparent,
               ),
               padding: EdgeInsets.zero,
               shape: RoundedRectangleBorder(

@@ -64,7 +64,7 @@ final controller = Get.isRegistered<HomeController>()?Get.find<HomeController>()
                           decoration: BoxDecoration(
                             color: Colors.white,
                           ),
-                          child: CachedNetworkImage(imageUrl: "https://scontent.cdninstagram.com/v/t51.71878-15/582076970_819025710736861_5547549926357007903_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=106&ig_cache_key=Mzc2NzU0MzkwMzg4OTE0NTgxMA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=nrywmMEuPhwQ7kNvwFmEEk5&_nc_oc=AdmNDEoJIHsBee_nOzwt38iaRpWpKC8VcIUSHS686ZgUzig7qYNxmaKJsI5sOx8zodcqQUtXlCnuMflIZE3mXHNO&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=fPgb1MB56bgYbkB24eb6mg&oh=00_AfhWCMS8ZBGYIsw0Ap9npDXwjMq0PJJl9dGjoW0OIvpOoA&oe=6920784B"),
+                          child: CachedNetworkImage(imageUrl: "https://scontent.cdninstagram.com/v/t51.82787-15/568956222_18086085428298927_65363893771830504_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=1&ig_cache_key=Mzc0NjcxNzU2MTIyNTYxODg1NQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjU0MHg5NjAuc2RyLkMzIn0%3D&_nc_ohc=1Xn1QLIyHkEQ7kNvwHYyWec&_nc_oc=AdmhjWWxMv06a9yW9Kh3ZoSI-aDDagvxQJBt53X8m1sDO7PuW87IwRTxzKyupmJp46O74YeExzU4ICqK8D5Z9Ude&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=3PUsb3E8nA3F2UXDwbw8rw&oh=00_AfgwMK0QbjCT9GJHuDdmy88_AdTTfuzKmX5b7jzyoxul4A&oe=692291F7"),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left:8.0),

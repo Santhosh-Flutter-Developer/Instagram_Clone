@@ -22,6 +22,12 @@ class AppImages {
   static var icRepostOut = '$kBaseIcons/ic_repost_out.svg';
   static var icSendOut = '$kBaseIcons/ic_send_out.svg';
   static var icViewOut = '$kBaseIcons/ic_view_out.svg';
+  static var icGrid = '$kBaseIcons/ic_grid.svg';
+  static var icLock = '$kBaseIcons/ic_lock.svg';
+  static var icMenu = '$kBaseIcons/ic_menu.svg';
+  static var icThread = '$kBaseIcons/ic_thread.svg';
+  static var icUserComment = '$kBaseIcons/ic_user_coment.svg';
+  static var icUserAdd = '$kBaseIcons/ic_user_add.svg';
 
 
   //WEBP

@@ -115,6 +115,7 @@ class ReelsWidget extends StatelessWidget {
                                 ),
                                 AppOutlinedButton(
                                   label: "Follow",
+                                  outline: true,
                                   onTap: (){},
                                 ),
                               ],

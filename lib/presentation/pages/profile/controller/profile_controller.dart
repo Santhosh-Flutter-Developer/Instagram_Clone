@@ -1,10 +1,11 @@
 
 import 'package:get/get.dart';
+import 'package:instagram_clone/core/constants/app_images.dart';
 import 'package:instagram_clone/presentation/pages/search/models/search_grid_model.dart';
 
-class SearchGridController extends GetxController{
+class ProfileController extends GetxController{
 
-  List searchGrid = [
+  List profileGrid = [
     SearchGridModel(
       tileUrl: "https://scontent.cdninstagram.com/v/t51.82787-15/559941765_17941722243065709_1630425675415280950_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=102&ig_cache_key=MzcyODczMzAyMjYzNzQxNDcwNjE3OTQxNzIyMjM3MDY1NzA5.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjU0MHg5NjAuc2RyLkMzIn0%3D&_nc_ohc=So-yJr3R37gQ7kNvwGywdlC&_nc_oc=AdnWaf0kSgcnaHiF_DT0iak4vU5LX93FkfGWemdvRYkVlxiIEeU9beCRnPW-ri_ETPIub5YbKwqOwEMzoQP6b1i_&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=P-gaSK56j0i7QB0Wcf9vQQ&oh=00_AfizHiidSCfyhYNNpwosASZ5N1usUzFGGjegIjhmvIZ1zA&oe=69228753",
       viewCount: "1.4M",
@@ -85,6 +86,12 @@ class SearchGridController extends GetxController{
       tileUrl: "https://scontent.cdninstagram.com/v/t51.82787-15/550837667_17900624931299370_4137291951224450411_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=MzcyMzYwODMyOTU0MTUxMzYxMTE3OTAwNjI0OTI1Mjk5Mzcw.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjU0MHg5NjAuc2RyLkMzIn0%3D&_nc_ohc=zItffNtxBNgQ7kNvwG8kOin&_nc_oc=AdmbikgpdW2Fo8U_UaYalEN7qwk9w_uSCzUbsiYz7qAHGI0tdOzKniJHgCsWBtvyLpZvqwuo2MAQJWAWvhoSSYNI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=TT3LUcQF7dK5btGkCczEXQ&oh=00_Afjz1EXo1NtTsDo2_h21b1LxIjvysRB3Sz8D1ty-6Zmt2Q&oe=69227AD5",
       viewCount: "987K",
     ),
+  ];
+
+  List tabs = [
+    AppImages.icGrid,
+    AppImages.icReelsOut,
+    AppImages.icUserComment,
   ];
 
   @override

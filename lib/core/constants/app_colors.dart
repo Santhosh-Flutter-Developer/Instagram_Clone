@@ -15,7 +15,7 @@ const kDarkSecondaryText =Color(0xffEAEAEA);
 
 ///BUTTON COLORS
 //PRIMARY BUTTON
-const kPrimaryButtonBackground =  Color(0xff6b4306);
+const kPrimaryButtonBackground =  Color(0xFF2B3036);
 const kPrimaryButtonText = Color(0xffFFFFFF);
 
 //SECONDARY BUTTON
