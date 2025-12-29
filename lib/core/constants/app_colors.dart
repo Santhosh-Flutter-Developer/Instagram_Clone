@@ -30,6 +30,7 @@ const kDisabledButtonText = Color(0xffD9D9D9);
 ///BORDER & DIVIDER COLORS
 const kBorder= Color(0xffCCCCCC);
 const kDividers= Color(0xffE0E0E0);
+const kSelectedColor = Color(0xff0064E0); 
 
 ///STATUS COLORS
 const kSuccess= Color(0xFF28A745);

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:instagram_clone/core/constants/app_colors.dart';
 import 'package:instagram_clone/core/constants/app_styles.dart';
 
 
@@ -14,51 +16,48 @@ class AppTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical:8.0),
+      padding:  EdgeInsets.symmetric(vertical:8.0,horizontal: 10.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-                 label??"",
-                  style: kAppTextTheme.bodyLarge
-                ),
-                SizedBox(
-                  height: size.height * 0.01,
-                ),
           SizedBox(
             height: size.height / 13,
             child: TextField(
               controller: textEditingController,
-              style: kAppTextTheme.bodyLarge,
+              style: kAppTextTheme.bodyLarge?.copyWith(
+                fontSize: 12.h,
+                color: kDarkSecondaryText
+              ),
               maxLines: 1,
               keyboardType: TextInputType.emailAddress,
-              cursorColor: const Color(0xFF151624),
+cursorColor: kDarkSecondaryText,
               decoration: InputDecoration(
                 hintText: hintText??"",
-                hintStyle: kAppTextTheme.bodyLarge,
+                hintStyle: kAppTextTheme.bodyLarge?.copyWith(
+                  fontSize: 12.h,
+                  color: kDarkSecondaryText
+                ),
                 filled: true,
-                fillColor: textEditingController!.text.isEmpty
-                    ? const Color.fromRGBO(248, 247, 251, 1)
-                    : Colors.transparent,
+                fillColor: kTransparent,
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                     borderSide: BorderSide(
                       color: textEditingController!.text.isEmpty
-                          ? Colors.transparent
-                          : const Color(0xFF1aa351),
+                          ? kDividers.withOpacity(0.4)
+                          : kSelectedColor,
                     )),
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                     borderSide: const BorderSide(
-                      color:  Color(0xFF1aa351),
+                      color: kSelectedColor,
                     )),
-                prefixIcon: Icon(
+                prefixIcon:prefixIcon!=null? Icon(
                  prefixIcon?? Icons.mail_outline_rounded,
                   color: textEditingController!.text.isEmpty
                       ? const Color(0xFF151624).withOpacity(0.5)
-                      : const Color(0xFF1aa351),
+                      : kSelectedColor,
                   size: 16,
-                ),
+                ):null,
                
               ),
             ),

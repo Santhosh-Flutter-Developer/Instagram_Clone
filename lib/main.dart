@@ -6,7 +6,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:instagram_clone/core/constants/app_colors.dart';
 import 'package:instagram_clone/core/constants/app_styles.dart';
 import 'package:instagram_clone/core/utils/route_observer.dart';
-import 'package:instagram_clone/presentation/pages/landing_page/view/landing_page.dart';
+import 'package:instagram_clone/presentation/pages/login/view/login.dart';
 
 void main() async{
    await ScreenUtil.ensureScreenSize();
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
             home: child,
             
       ),
-      child: LandingPage(),
+      child: Login(),
     );
   }
 }

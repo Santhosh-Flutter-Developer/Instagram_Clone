@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:instagram_clone/core/constants/app_colors.dart';
 import 'package:instagram_clone/core/constants/app_styles.dart';
 
 
@@ -14,44 +16,38 @@ class AppPasswordField extends StatelessWidget {
   Widget build(BuildContext context) {
     final size= MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical:8.0),
+      padding:  EdgeInsets.symmetric(vertical:8.0,horizontal: 10.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-            Text(
-                 label??"",
-                  style:kAppTextTheme.bodyLarge
-                ),
-                SizedBox(
-                  height: size.height * 0.01,
-                ),
           Container(
             height: size.height / 13,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              color: const Color.fromRGBO(248, 247, 251, 1),
+              color:kTransparent,
+              border: Border.all(
+                color: kDividers.withOpacity(0.4)
+              )
             ),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
                 children: [
-                  const Icon(
-                    Icons.lock_outline_rounded,
-                    size: 16,
-                  ),
-                  const SizedBox(
-                    width: 16,
-                  ),
+                 
                   Expanded(
                     child: TextField(
                       controller: textEditingController,
                       style: kAppTextTheme.bodyLarge,
-                      cursorColor: const Color(0xFF151624),
+                      cursorColor: kDarkSecondaryText,
                       obscureText: obscureText??false,
+                      
                       keyboardType: TextInputType.visiblePassword,
                       decoration: InputDecoration(
                         hintText:hintText??"",
-                        hintStyle: kAppTextTheme.bodyLarge,
+                        hintStyle: kAppTextTheme.bodyLarge?.copyWith(
+                  fontSize: 12.h,
+                  color: kDarkSecondaryText
+                ),
                         border: InputBorder.none,
                       ),
                     ),
