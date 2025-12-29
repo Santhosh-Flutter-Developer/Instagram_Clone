@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:instagram_clone/core/constants/app_constants.dart';
 import 'package:instagram_clone/core/constants/app_images.dart';
+import 'package:instagram_clone/presentation/pages/forgot_password/view/forgot_password.dart';
 import 'package:instagram_clone/presentation/widgets/app_button.dart';
 import 'package:instagram_clone/presentation/widgets/app_password_field.dart';
 import 'package:instagram_clone/presentation/widgets/app_text_field.dart';
+import 'package:instagram_clone/routes/app_routes.dart';
 
 class MobileLogin extends StatelessWidget {
   const MobileLogin({super.key});
@@ -55,7 +57,9 @@ class MobileLogin extends StatelessWidget {
                       ),
                        
                       GestureDetector(
-                        onTap: (){},
+                        onTap: (){
+                          Go.to(ForgotPassword());
+                        },
                         child: Padding(
                           padding:  EdgeInsets.all(kHeight*2),
                           child: Text("Forgotten password?"),
