@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:instagram_clone/core/constants/app_constants.dart';
 import 'package:instagram_clone/core/constants/app_images.dart';
 import 'package:instagram_clone/presentation/pages/forgot_password/view/forgot_password.dart';
+import 'package:instagram_clone/presentation/pages/landing_page/view/landing_page.dart';
+import 'package:instagram_clone/presentation/pages/signup/view/signup.dart';
 import 'package:instagram_clone/presentation/widgets/app_button.dart';
 import 'package:instagram_clone/presentation/widgets/app_password_field.dart';
 import 'package:instagram_clone/presentation/widgets/app_text_field.dart';
@@ -53,7 +55,9 @@ class MobileLogin extends StatelessWidget {
                       ),
                       AppButton(
                         label: "Log in",
-                        onTap: (){},
+                        onTap: (){
+                           Go.offAll(LandingPage());
+                        },
                       ),
                        
                       GestureDetector(
@@ -74,7 +78,9 @@ class MobileLogin extends StatelessWidget {
               ),
               AppButton(
                     label: "Create new account",
-                    onTap: (){},
+                    onTap: (){
+                       Go.to(Signup());
+                    },
                     outline: true,
                   ),
                   SizedBox(
