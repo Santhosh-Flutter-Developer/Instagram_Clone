@@ -10,7 +10,8 @@ class AppTextField extends StatelessWidget {
   final String? hintText;
   final String? label;
   final IconData? prefixIcon;
-  const AppTextField({super.key,this.label,this.textEditingController,this.hintText,this.prefixIcon});
+  final int? maxLength;
+  const AppTextField({super.key,this.label,this.textEditingController,this.hintText,this.prefixIcon,this.maxLength});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,7 @@ class AppTextField extends StatelessWidget {
           SizedBox(
             height: size.height / 13,
             child: TextField(
+              maxLength: maxLength,
               controller: textEditingController,
               style: kAppTextTheme.bodyLarge?.copyWith(
                 fontSize: 12.h,
