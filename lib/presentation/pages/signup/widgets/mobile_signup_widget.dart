@@ -5,6 +5,7 @@ import 'package:instagram_clone/core/constants/app_colors.dart';
 import 'package:instagram_clone/core/constants/app_constants.dart';
 import 'package:instagram_clone/core/constants/app_styles.dart';
 import 'package:instagram_clone/presentation/pages/login/view/login.dart';
+import 'package:instagram_clone/presentation/pages/signup/widgets/mobile_signup_bottomsheet.dart';
 import 'package:instagram_clone/presentation/widgets/app_button.dart';
 import 'package:instagram_clone/presentation/widgets/app_text_field.dart';
 import 'package:instagram_clone/routes/app_routes.dart';
@@ -90,7 +91,11 @@ class MobileSignupWidget extends StatelessWidget {
                             AppButton(
                               label: "Next",
                               onTap: (){
-                                otp.value=true;
+                                Get.bottomSheet(MobileSignupBottomsheet(
+                                  otp: otp,
+                                  
+                                ));
+                                // otp.value=true;
                               },
                             ),
                             
