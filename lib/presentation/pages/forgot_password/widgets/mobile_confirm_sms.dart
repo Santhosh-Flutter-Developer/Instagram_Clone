@@ -13,7 +13,9 @@ class MobileConfirmSms extends StatelessWidget {
   final RxBool multipleAccount;
   final RxBool anotherOption;
   final RxBool confirmSms;
-  const MobileConfirmSms({super.key, required this.smsLink,required this.multipleAccount,required this.anotherOption,required this.confirmSms});
+  final RxBool saveLogin;
+  final RxBool confirmPassword;
+  const MobileConfirmSms({super.key, required this.smsLink,required this.multipleAccount,required this.anotherOption,required this.confirmSms,required this.confirmPassword,required this.saveLogin});
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +82,14 @@ class MobileConfirmSms extends StatelessWidget {
                       ),
                       AppButton(
                         label: "Continue",
-                        onTap: (){},
+                        onTap: (){
+                          saveLogin.value=true;
+                          confirmPassword.value=false;
+                          multipleAccount.value=false;
+                          smsLink.value=false;
+                          anotherOption.value=false;
+                          confirmSms.value=false;
+                        },
                       ),
                       GestureDetector(
                         onTap: (){
