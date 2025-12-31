@@ -10,7 +10,8 @@ import 'package:instagram_clone/presentation/widgets/app_button.dart';
 class MobileForgotSmsSetup extends StatelessWidget {
   final RxBool multipleAccount;
   final RxBool anotherOption;
-  const MobileForgotSmsSetup({super.key,required this.multipleAccount,required this.anotherOption});
+  final RxBool smsLink;
+  const MobileForgotSmsSetup({super.key,required this.multipleAccount,required this.anotherOption,required this.smsLink});
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +129,9 @@ class MobileForgotSmsSetup extends StatelessWidget {
               AppButton(
                               label: "Continue",
                               onTap: (){
-                               
+                              smsLink.value=true;
+                              multipleAccount.value =false;
+                              anotherOption.value =false;
                               },
                             ),
           ],
