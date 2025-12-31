@@ -11,7 +11,8 @@ class MobileForgotSmsSetup extends StatelessWidget {
   final RxBool multipleAccount;
   final RxBool anotherOption;
   final RxBool smsLink;
-  const MobileForgotSmsSetup({super.key,required this.multipleAccount,required this.anotherOption,required this.smsLink});
+  final RxBool confirmSms;
+  const MobileForgotSmsSetup({super.key,required this.multipleAccount,required this.anotherOption,required this.smsLink,required this.confirmSms});
 
   @override
   Widget build(BuildContext context) {

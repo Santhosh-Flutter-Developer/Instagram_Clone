@@ -11,7 +11,8 @@ class MobileMultipleAccount extends StatelessWidget {
   final RxBool swap;
   final RxBool multipleAccount;
   final RxBool anotherOption;
-  const MobileMultipleAccount({super.key,required this.swap,required this.multipleAccount,required this.anotherOption});
+  final RxBool confirmSms;
+  const MobileMultipleAccount({super.key,required this.swap,required this.multipleAccount,required this.anotherOption,required this.confirmSms});
 
   @override
   Widget build(BuildContext context) {

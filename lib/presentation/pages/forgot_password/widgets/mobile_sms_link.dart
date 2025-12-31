@@ -11,7 +11,8 @@ class MobileSmsLink extends StatelessWidget {
   final RxBool smsLink;
   final RxBool multipleAccount;
   final RxBool anotherOption;
-  const MobileSmsLink({super.key,required this.smsLink,required this.anotherOption,required this.multipleAccount});
+  final RxBool confirmSms;
+  const MobileSmsLink({super.key,required this.smsLink,required this.anotherOption,required this.multipleAccount,required this.confirmSms});
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +109,10 @@ class MobileSmsLink extends StatelessWidget {
                               label: "Try another way",
                               outline: true,
                               onTap: (){
-                               
+                               confirmSms.value=true;
+                               multipleAccount.value=false;
+                               anotherOption.value=false;
+                               smsLink.value=false;
                               },
                             ),    
                   ],
