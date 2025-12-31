@@ -10,7 +10,8 @@ import 'package:instagram_clone/presentation/widgets/app_button.dart';
 class MobileMultipleAccount extends StatelessWidget {
   final RxBool swap;
   final RxBool multipleAccount;
-  const MobileMultipleAccount({super.key,required this.swap,required this.multipleAccount});
+  final RxBool anotherOption;
+  const MobileMultipleAccount({super.key,required this.swap,required this.multipleAccount,required this.anotherOption});
 
   @override
   Widget build(BuildContext context) {
@@ -136,7 +137,7 @@ class MobileMultipleAccount extends StatelessWidget {
                       GestureDetector(
                         onTap: (){
                          multipleAccount.value=false;
-                         
+                         anotherOption.value = true;
                         },
                         child: Padding(
                           padding:  EdgeInsets.all(kHeight*2),
